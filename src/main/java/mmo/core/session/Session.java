@@ -5,7 +5,6 @@ import io.netty.channel.Channel;
 public interface Session {
 
     /**
-     *
      * Check if the session is alive
      */
     boolean isAlive();
@@ -16,7 +15,6 @@ public interface Session {
     void close();
 
     /**
-     *
      * Return IO channel
      */
     Channel channel();

@@ -1,4 +1,3 @@
 package mmo
 
-class MMOServer {
-}
+class MMOServer

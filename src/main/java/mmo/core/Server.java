@@ -2,7 +2,7 @@ package mmo.core;
 
 import mmo.core.session.Session;
 
-import java.util.LinkedList;
+import java.util.Collection;
 
 public interface Server<S extends Session> {
 
@@ -19,5 +19,5 @@ public interface Server<S extends Session> {
     /**
      * Get all connected sessions
      */
-    LinkedList<S> sessions();
+    Collection<S> sessions();
 }
