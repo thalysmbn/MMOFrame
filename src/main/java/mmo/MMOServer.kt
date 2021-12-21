@@ -1,0 +1,4 @@
+package mmo
+
+class MMOServer {
+}
