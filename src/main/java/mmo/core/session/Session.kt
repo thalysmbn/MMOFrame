@@ -4,11 +4,6 @@ import mmo.core.netty.ChannelAdapter
 
 interface Session {
     /**
-     * Check if the session is alive
-     */
-    val isAlive: Boolean
-
-    /**
      * Close the session
      */
     fun close()
@@ -28,5 +23,5 @@ interface Session {
     /**
      * Return IO channel
      */
-    fun channel(): ChannelAdapter?
+    fun channel(): ChannelAdapter
 }

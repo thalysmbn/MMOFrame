@@ -1,12 +1,14 @@
-package mmo.network;
+package network;
 
 import mmo.core.netty.ChannelAdapter;
+import mmo.core.network.Channel;
 import mmo.core.session.Session;
 
 public class NetworkSession implements Session {
+    private ChannelAdapter channel;
 
     public NetworkSession(ChannelAdapter channel) {
-
+        this.channel = channel;
     }
 
     @Override
@@ -26,6 +28,6 @@ public class NetworkSession implements Session {
 
     @Override
     public ChannelAdapter channel() {
-        return null;
+        return channel;
     }
 }

@@ -21,7 +21,7 @@ class ChannelAdapter(private val channel: ChannelHandlerContext) : Channel {
     override val isAlive: Boolean
         get() = channel.channel().isActive
 
-    override fun address(): InetSocketAddress? {
+    override fun address(): InetSocketAddress {
         return channel.channel().remoteAddress() as InetSocketAddress
     }
 }

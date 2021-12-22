@@ -1,12 +1,13 @@
 package mmo.core.network
 
+import io.netty.channel.ChannelId
 import java.net.InetSocketAddress
 
 interface Channel {
     /**
      * Get the channel id
      */
-    fun id(): Any?
+    fun id(): ChannelId?
 
     /**
      * Write message to the channel
@@ -28,5 +29,5 @@ interface Channel {
     /**
      * Get the client address
      */
-    fun address(): InetSocketAddress?
+    fun address(): InetSocketAddress
 }
