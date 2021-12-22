@@ -1,6 +1,5 @@
 package mmo.network;
 
-import io.netty.channel.Channel;
 import mmo.core.netty.ChannelAdapter;
 import mmo.core.session.Session;
 import mmo.core.session.SessionFactory;

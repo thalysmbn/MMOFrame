@@ -1,34 +1,32 @@
-package mmo.core.session;
+package mmo.core.session
 
-import io.netty.channel.Channel;
-import mmo.core.netty.ChannelAdapter;
+import mmo.core.netty.ChannelAdapter
 
-public interface Session {
-
+interface Session {
     /**
      * Check if the session is alive
      */
-    boolean isAlive();
+    val isAlive: Boolean
 
     /**
      * Close the session
      */
-    void close();
+    fun close()
 
     /**
      * Handle a received packet
      *
      * @param msg Packet to handle
      */
-    void receive(Object msg);
+    fun receive(msg: Any?)
 
     /**
      * Call when connection is down
      */
-    void inactive();
+    fun inactive()
 
     /**
      * Return IO channel
      */
-    ChannelAdapter channel();
+    fun channel(): ChannelAdapter?
 }

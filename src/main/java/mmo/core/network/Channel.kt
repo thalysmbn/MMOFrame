@@ -1,32 +1,32 @@
-package mmo.core.network;
+package mmo.core.network
 
-import java.net.InetSocketAddress;
+import java.net.InetSocketAddress
 
-public interface Channel {
+interface Channel {
     /**
      * Get the channel id
      */
-    Object id();
+    fun id(): Any?
 
     /**
      * Write message to the channel
      *
      * @param message Message to send
      */
-    void write(Object message);
+    fun write(message: Any?)
 
     /**
      * Close the channel
      */
-    void close();
+    fun close()
 
     /**
      * Check if the channel is alive
      */
-    boolean isAlive();
+    val isAlive: Boolean
 
     /**
      * Get the client address
      */
-    InetSocketAddress address();
+    fun address(): InetSocketAddress?
 }
