@@ -29,7 +29,7 @@ public final class SessionHandlerAdapter<S extends Session> extends ChannelInbou
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) {
-        final S session = factory.create(ctx.channel());
+        final S session = factory.create(new ChannelAdapter(ctx));
         ctx
                 .channel()
                 .attr(sessionAttribute)
@@ -39,12 +39,12 @@ public final class SessionHandlerAdapter<S extends Session> extends ChannelInbou
 
     @Override
     public void channelInactive(ChannelHandlerContext ctx) {
-
+        ctx.channel().attr(sessionAttribute).get().inactive();
     }
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
-
+        ctx.channel().attr(sessionAttribute).get().receive(msg);
     }
 
     @Override

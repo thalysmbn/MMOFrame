@@ -1,11 +1,11 @@
 package mmo.core.session;
 
-import io.netty.channel.Channel;
+import mmo.core.netty.ChannelAdapter;
 
 public interface SessionFactory<S extends Session> {
 
     /**
      * Create the session from the channel
      */
-    S create(Channel channel);
+    S create(ChannelAdapter channel);
 }
