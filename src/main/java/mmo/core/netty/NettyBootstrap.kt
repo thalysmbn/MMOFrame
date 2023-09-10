@@ -1,14 +1,12 @@
 package mmo.core.netty
 
 import io.netty.bootstrap.ServerBootstrap
-import io.netty.buffer.Unpooled
 import io.netty.channel.Channel
 import io.netty.channel.ChannelHandlerContext
 import io.netty.channel.ChannelInitializer
 import io.netty.channel.EventLoopGroup
 import io.netty.channel.nio.NioEventLoopGroup
 import io.netty.channel.socket.nio.NioServerSocketChannel
-import io.netty.handler.codec.DelimiterBasedFrameDecoder
 import io.netty.handler.timeout.IdleStateEvent
 import io.netty.handler.timeout.IdleStateHandler
 import mmo.core.Server
@@ -55,7 +53,7 @@ class NettyBootstrap<S : Session?>(private val factory: SessionFactory<S>, priva
         channel!!.closeFuture()
     }
 
-    override fun sessions(): Collection<S>? {
+    override fun sessions(): Collection<S> {
         return sessionHandlerAdapter!!.sessions()
     }
 }
