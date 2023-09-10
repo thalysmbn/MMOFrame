@@ -2,11 +2,16 @@
 
 &nbsp;MMOFrame é um projeto em Kotlin utilizando Netty, com o foco de se tornar uma framework para um servidor MMO, facilitando na criação e gerenciamento do server-side de um jogo MMO, trazendo fácil a leitura e implementação de gerenciamento de salas, lobbys, sessões e usuários
 
-# Netty
+## 🛠️ Construído com
+
+* [Netty](https://netty.io) - Framework de rede utilizado
+* [log4j](https://logging.apache.org/log4j/) - Biblioteca de registro (logging)
+
+## Netty
 
 &nbsp;Utilizar o Netty em um servidor MMO (Massively Multiplayer Online) oferece inúmeras vantagens significativas. Netty é um framework de rede altamente escalável e eficiente que foi projetado com desempenho, uma escolha sólida para servidores MMO devido à sua eficiência, flexibilidade e escalabilidade, podendo lidar com o tráfego intenso e a comunicação de rede complexa que são essenciais para uma experiência de jogo online suave e envolvente.
 
-# Iniciação
+## Iniciação
 
 **Start**
 ```java
