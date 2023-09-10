@@ -13,7 +13,6 @@ public class NetworkSession implements Session {
 
     @Override
     public void close() {
-
     }
 
     @Override

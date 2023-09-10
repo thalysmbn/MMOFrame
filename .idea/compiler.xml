@@ -9,8 +9,5 @@
         <module name="MMOServer" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="MMOServer" target="8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
